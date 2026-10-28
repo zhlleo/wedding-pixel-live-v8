@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: wedding-pixel-v8
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: ADMIN_PASSWORD
+        sync: false
